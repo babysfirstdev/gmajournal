@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Daily Work Journal</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+
+<body style="background-color:#d4ffec;">
+    <div class="container">
+        <div class="shadow-lg card mt-5 mb-3" style="width: 100%">
+            <div class="card-body">
+              <h2 class="card-title">Daily Work Journal</h2>
+              <p class="card-text">What will you accomplish today? Don't let the days pass by unchecked. Keep a record of what you've done.</p>
+              <hr>
+            </div>
+            <form action="" method="POST">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                <div class="row gx-5">
+                    <div class="col-md-6 mb-3">
+                        <strong>Date</strong>
+                        <label for="date"></label>
+                        <input class="form-control p-3 border bg-light"" type="date" id="date" name="date">
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <strong>Day of the Week</strong>
+                        <label for="day"></label>
+                        <select class="form-control p-3 border bg-light" name="day" id="day">
+                            <option value="Monday">Monday</option>
+                            <option value="Tuesday">Tuesday</option>
+                            <option value="Wednesday">Wednesday</option>
+                            <option value="Thursday">Thursday</option>
+                            <option value="Friday">Friday</option>
+                            <option value="Saturday">Saturday</option>
+                            <option value="Sunday">Sunday</option>
+                        </select>
+                    </div>
+                </div>
+              </li>
+              <li class="list-group-item">
+                <div class="row gx-5">
+                    <div class="col-md-6 mb-3">
+                        <strong>To Do</strong>
+                        <label for="proposed"></label>
+                        <textarea class="form-control p-3 border bg-light" name="proposed" id="proposed" placeholder="What do you want to do today?"></textarea>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <strong>Completed</strong>
+                        <label for="completed"></label>
+                        <textarea class="form-control p-3 border bg-light" name="completed" id="completed" placeholder="What did you accomplish today?"></textarea>
+                    </div>
+                </div>
+              </li>
+              <li class="list-group-item">
+                <div class="row gx-5">
+                    <div class="col mb-3">
+                        <strong>Today's Summary</strong>
+                        <label for="notes"></label>
+                        <textarea class="form-control p-3 border bg-light" name="notes" id="notes" placeholder="How did you feel about today?"></textarea>
+                    </div>
+                </div>
+              </li>
+            </ul>
+        
+            <div class="card-body">
+                <div class="row gx-5">
+                    <div class="col">
+                        <button class="btn btn-primary" type="submit">Log Your Day</button>
+                        <p><%= messages %></p>
+                    </div>
+                </div>
+            </div>
+        </form>
+          </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"></script>
+
+</html>
+
+        <!-- <form action="" method="POST">
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label for="date">Date:</label>
+                    <input class="p-3 border bg-light" type="date" id="date" name="date">
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="day">Day of the Week</label>
+                    <select class="p-3 border bg-light" name="day" id="day">
+                        <option value="Monday">Monday</option>
+                        <option value="Tuesday">Tuesday</option>
+                        <option value="Wednesday">Wednesday</option>
+                        <option value="Thursday">Thursday</option>
+                        <option value="Friday">Friday</option>
+                        <option value="Saturday">Saturday</option>
+                        <option value="Sunday">Sunday</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row gx-5">
+                <div class="col-md-6 mb-3">
+                    <label for="proposed">Proposed</label>
+                    <textarea class="p-3 border bg-light" name="proposed" id="proposed" cols="30" rows="10"
+                        placeholder="What do you want to do today?"></textarea>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="completed">Completed</label>
+                    <textarea class="p-3 border bg-light" name="completed" id="completed" cols="30" rows="10"
+                        placeholder="What did you accomplish?"></textarea>
+                </div>
+            </div>
+            <div class="row gx-5">
+                <div class="col-md-6 mb-3">
+                    <label for="notes">Reflection on the Day</label>
+                    <textarea class="p-3 border bg-light" name="notes" id="notes" cols="30" rows="10"
+                        placeholder="How did you feel about today?"></textarea>
+                </div>
+            </div>
+            <div class="row gx-5">
+                <div class="col-md-6">
+                    <button type="submit">Submit</button>
+                </div>
+            </div>
+        </form>
+    </div> -->
