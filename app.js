@@ -26,7 +26,7 @@ app.post('/', async (req, res) => {
     });
     const client = await auth.getClient();
     const googleSheets = google.sheets({ version: "v4", auth: client });
-    const spreadsheetId = "1JxV7buV1mtm-nyCuDgbeK8p8CmVBevPXEywF4hHXRVo";
+    const spreadsheetId = "spreadsheetUrl";
 
     // Get metadata about spreadsheet
     const metaData = await googleSheets.spreadsheets.get({
