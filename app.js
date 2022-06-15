@@ -52,7 +52,7 @@ app.post('/', async (req, res) => {
 
     });
     req.flash('success', 'Successfully logged!');
-    *res.redirect('/');
+    res.redirect('/');
 });
 
 
