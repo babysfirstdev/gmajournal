@@ -26,7 +26,7 @@ app.post('/', async (req, res) => {
     });
     const client = await auth.getClient();
     const googleSheets = google.sheets({ version: "v4", auth: client });
-    const spreadsheetId = "spreadsheetUrl";
+    const spreadsheetId = "1JLPxFt5sdHHPkLzZc-NYMebRc165SoUqL1_02Y3zwf0";
 
     // Get metadata about spreadsheet
     const metaData = await googleSheets.spreadsheets.get({
@@ -37,13 +37,13 @@ app.post('/', async (req, res) => {
     const getRows = await googleSheets.spreadsheets.values.get({
         auth,
         spreadsheetId,
-        range: "Sheet1!A2:B2",
+        range: "2022!A:F",
     });
     // Write row(s) to spreadsheet
     await googleSheets.spreadsheets.values.append({
         auth,
         spreadsheetId,
-        range: "Sheet1!A:F",
+        range: "2022!A:F",
         valueInputOption: "USER_ENTERED",
         resource: {
             values:
@@ -51,7 +51,7 @@ app.post('/', async (req, res) => {
         },
 
     });
-    req.flash('success', 'Successfully logged!');
+    // req.flash('success', 'Successfully logged!');
     res.redirect('/');
 });
 
@@ -59,4 +59,3 @@ app.post('/', async (req, res) => {
 app.listen(8080, (req, res) => {
     console.log('Running on 8080')
 });
-
